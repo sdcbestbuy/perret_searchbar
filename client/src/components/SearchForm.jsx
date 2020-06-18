@@ -21,16 +21,19 @@ const SearchBar = ({ products }) => {
       component = <button onClick={() => setTextField(true)}>X</button>;
     }
     return(
-      <div>
+      <div className="search-container">
         <input
           type="text" 
           value={value} 
           onChange={(e) => handleOnChange(e)}
-          
+          className='search-bar'
           placeholder="Search Best Buy"
         />
         {component}
-        <button>Search</button>
+        <button
+        className="search-button" 
+        
+        >Search</button>
         <p>{query}</p>
       </div>
     );

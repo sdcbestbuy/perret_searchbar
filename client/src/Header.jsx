@@ -14,16 +14,18 @@ const Header = () => {
   return(
     <div className="header">
       <LogoContainer/>
-      <LinkList 
-        links={links}
-        className="link-list"
-      />
-      <SearchForm 
-        onChange={() => console.log('hi')}
-        className="search-form"
-      />
+      <div className='right-container'>  
+        <LinkList 
+          links={links}
+          className="link-list"
+        />
+        <SearchForm 
+          onChange={() => console.log('hi')}
+          className="search-form"
+        />
+      </div>
       {/* Only want to show thos when input is onfocus */}
-      <ProductList products={products}/>
+      {/* {<ProductList products={products}/>} */}
     </div>
   );
 };
