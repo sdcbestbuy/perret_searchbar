@@ -22,19 +22,19 @@ const SearchBar = ({ products }) => {
     }
     return(
       <div className="search-container">
-        <input
-          type="text" 
-          value={value} 
-          onChange={(e) => handleOnChange(e)}
-          className='search-bar'
-          placeholder="Search Best Buy"
-        />
-        {component}
-        <button
-        className="search-button" 
-        
-        >Search</button>
-        <p>{query}</p>
+        <form>
+          <input
+            type="text" 
+            value={value} 
+            onChange={(e) => handleOnChange(e)}
+            className='search-bar'
+            placeholder="Search Best Buy"
+          />
+          {component}
+          <button
+          className="search-button"         
+          >Search</button>
+        </form>
       </div>
     );
 };

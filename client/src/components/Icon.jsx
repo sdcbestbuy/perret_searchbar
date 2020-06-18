@@ -1,11 +1,5 @@
 import React from 'react';
 
-const Icon = ({ icon }) => {
-  return(
-    <div>
-      <p>{icon.name}</p>
-    </div>
-  );
-};
+const Icon = ({ icon }) => <li>{icon.name}</li>;
 
 export default Icon;

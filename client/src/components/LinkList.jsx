@@ -4,7 +4,7 @@ import Link from './Link.jsx';
 const LinkList = ({ links }) => {
   return(
     <div className="link-container">
-        <ul className="link-list">
+       {/* <ul className="link-list">
         {links.map((link, i) => {
             return <Link 
             key={i} 
@@ -12,7 +12,7 @@ const LinkList = ({ links }) => {
             className="link"
             />
         })}
-        </ul>
+      </ul> */ }
     </div>
   );
 };
