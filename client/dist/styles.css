@@ -17,7 +17,7 @@ body {
   height: 100%;
 }
 .header {
-  display: block;
+  display: flex;
   border: 5px solid black;
   width: 100%;
   height: 100%;
@@ -26,13 +26,18 @@ body {
 
 .left-container {
     display: inline-block;
+    /* position: relative; */
     border: 3px solid green;
-    height: 100%;
+    height: 75%;
+    text-align: center;
+    vertical-align: middle;
     width: 20%;    
 }
 /* Direct child of left container components */
 
 .logo-image{
+  /* text-align: center; */
+  /* vertical-align: middle; */
   height: 72px;
   width: 120px;
 }
@@ -40,7 +45,7 @@ body {
 .right-container {
   display: inline-block;
   border: 3px solid pink;
-  height: 100%;
+  height: 75%;
   width: 80%;
 }
 .link-container {
@@ -54,6 +59,7 @@ body {
   justify-content: flex-end;
   color: #ffffff;
   list-style: none;
+  margin-bottom: 10px;
 }
 li {
   margin-left: 10px;
@@ -70,11 +76,27 @@ ul:last-child {
 .search-bar {
   width: 567px;
   height: 35px;
-  border-radius: 7px;
+  border-radius: 0px;
   
 }
 
 .search-button {
   height: 35px;
   background-color: white;
+  border-radius: 0px;
+  /* margin-right: 8px; */
+}
+
+.icons {
+    border: 1px solid greenyellow;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row;
+  /* position: absolute; */
+  border: 1px solid red;
 }

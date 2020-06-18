@@ -3,11 +3,13 @@ import Icon from './Icon.jsx';
 
 const Icons = ({ icons }) => {
   return(
-    <ul>
-      {icons.map((icon) => {
-        return <Icon icon={icon}/>
-      })}
-    </ul>
+    <div className='icons'>
+        <ul>
+        {icons.map((icon, i) => {
+            return <Icon key={i} icon={icon}/>
+        })}
+        </ul>
+    </div>
   );
 };
 
