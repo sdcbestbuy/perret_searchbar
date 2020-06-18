@@ -18,11 +18,14 @@ const SearchBar = ({ products }) => {
     //conditional render
     let component;
     if(!isTextFieldEmpty){
-      component = <button onClick={() => setTextField(true)}>X</button>;
+      component = <button 
+        onClick={() => setTextField(true)}
+        className="x-button"
+      >X</button>;
     }
     return(
       <div className="search-container">
-        <form>
+        <form className="search-from">
           <input
             type="text" 
             value={value} 

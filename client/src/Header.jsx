@@ -17,8 +17,10 @@ const Header = () => {
         {/* top-left-container */}
         <LogoContainer/>
         <div className='right-container'>
-          <div className="link-container"></div>
-          <div className="search-container"></div>
+          {/* {<div className="link-container"></div>} */}
+          <LinkList links={links}/>
+          {/* {<div className="search-container"></div>} */}
+          <SearchForm products={products}/>
           <div className="icon-list"></div>  
         </div>
       </div>
