@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+body {
+    background-color: #0246be;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    height: 400px;
+    width: 100%;
+    display: flex;
+}
+.logo {
+    height: 72px;
+    width: 128px;
+}
+
+.link-list {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+li{
+    color: white;
+    font-size: 15px;
+    
+}
