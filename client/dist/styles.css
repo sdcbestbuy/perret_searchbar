@@ -51,10 +51,8 @@ body {
 }
 
 .logo-image{
-  /* text-align: center; */
-  /* vertical-align: middle; */
-  height: 72px;
-  width: 120px;
+  width: 80%;
+  height: 100%;
 }
 
 /* Next top right section */
@@ -92,49 +90,3 @@ body {
   width: 100%;
   border: 1px solid red;
 }
-/* 
- 
-
-.link-list {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  color: #ffffff;
-  list-style: none;
-  margin-bottom: 10px;
-}
-li {
-  margin-left: 10px;
-}
-ul:last-child {
-  margin-right: 10px;
-}
-
-
-.search-bar {
-  width: 567px;
-  height: 35px;
-  border-radius: 0px;
-  
-}
-
-.search-button {
-  height: 35px;
-  background-color: white;
-  border-radius: 0px;
-  /* margin-right: 8px; */
-}
-
-.icons {
-    border: 1px solid greenyellow;
-    color: white;
-    display: flex;
-    flex-direction: row;
-}
-
-.bottom-container {
-  display: flex;
-  flex-direction: row;
-  /* position: absolute; */
-  border: 1px solid red;
-} */
