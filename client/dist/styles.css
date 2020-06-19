@@ -97,6 +97,7 @@ a {
 
 .search-form {
   /* display: inline-block; */
+  
 }
 
 .search-bar {
@@ -123,6 +124,25 @@ a {
     border: 2px solid blueviolet;
     width: 40%;
     height: 65%;
+    /* vertical-align:top; */
+}
+
+.test {
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  vertical-align: middle;
+  color: #ffffff;
+  text-align: center;
+}
+
+.abc {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-right: 1px solid white;
+  padding-right: 8px;
 }
 
 .bottom-div-content {

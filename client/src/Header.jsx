@@ -21,7 +21,8 @@ const Header = () => {
           <LinkList links={links}/>
           {/* {<div className="search-container"></div>} */}
           <SearchForm products={products}/>
-          <div className="icon-list"></div>  
+          {/*<div className="icon-list"></div>*/}
+          <Icons icons={icons}/>
         </div>
       </div>
       <div className="bottom">
