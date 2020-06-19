@@ -1,41 +1,152 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* vertical-align: baseline; */
 }
+
 body {
-    background-color: #0246be;
+  background-color: #0246be;
+  border: 5px solid gray;
+  height: 140px;
+  width: 100%;
 }
-
-.search-form {
-    display: flex;
-    justify-content: center;
+#root {
+  display: block;
+  border: 2px solid orange;
+  height: 100%;
+  width: 100%;
 }
-
+/* This is the whole container  */
 .header {
-    height: 400px;
+  display: block;
+  border: 5px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+/* Work on top container first */
+.top{
+  display: block;
+  width: 100%;
+  height: 80%;
+  border: 2px solid violet;
+}
+
+.bottom {
+  display: block;
+  height: 20%;
+  width: 100%;
+  border: 2px solid green;
+}
+/* Next work on top left container */
+
+.left-container {
+    display: inline-block;
+    border: 3px solid green;
+    height: 100%;
+    width: 15%;    
+    text-align: center;
+}
+
+.logo-image{
+  width: 80%;
+  height: 100%;
+}
+
+/* Next top right section */
+
+.right-container {
+  border: 3px solid red;
+  display: inline-block;
+  height: 100%;
+  width: 85%;
+}
+
+.link-container {
+    display: block;
     width: 100%;
-    display: flex;
-}
-.logo {
-    height: 72px;
-    width: 128px;
-}
+    height: 35%;
+    border: 2px solid yellow;
+} 
 
 .link-list {
-    color: white;
-    display: flex;
-    flex-direction: row;
-    /* justify-content: flex-end; */
-}
-
-ul {
-  list-style-type: none;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  list-style-type: none;
+  color: white;
+}
+.link {
+  margin-left: 30px;
 }
 
-li{
-    color: white;
-    font-size: 15px;
-    
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-container {
+    display: inline-block;
+    border: 2px solid orange;
+    width: 60%;
+    height: 65%;
+    vertical-align: top;
+}
+
+.search-form {
+  /* display: inline-block; */
+  
+}
+
+.search-bar {
+ width: 90%;
+ height: 35px;
+
+}
+
+.search-button{
+  height: 35px;
+  background-color: #ffffff;
+  /* width: 5%; */
+}
+
+.x-button {
+  height: 35px;
+  background-color: #ffffff;
+  color: #0649bf;
+  font-size: 13px;
+}
+
+.icon-list {
+    display: inline-block;
+    border: 2px solid blueviolet;
+    width: 40%;
+    height: 65%;
+    /* vertical-align:top; */
+}
+
+.test {
+  position:absolute;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  vertical-align: middle;
+  color: #ffffff;
+  text-align: center;
+}
+
+.abc {
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+  border-right: 1px solid white;
+  padding-right: 8px;
+}
+
+.bottom-div-content {
+  height: 100%;
+  width: 100%;
+  border: 1px solid red;
 }

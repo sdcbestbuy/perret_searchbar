@@ -3,15 +3,16 @@ import Link from './Link.jsx';
 
 const LinkList = ({ links }) => {
   return(
-    <ul>
-      {links.map((link, i) => {
-        return <Link 
-          key={i} 
-          link={link}
-          className="link"
-        />
-      })}
-    </ul>
+    <div className="link-container">
+      <ul className="link-list">
+        {links.map((link, i) => {
+            return <Link 
+            key={i} 
+            link={link}
+            />
+        })}
+      </ul>
+    </div>
   );
 };
 
