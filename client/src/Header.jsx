@@ -52,34 +52,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-{/* */}
-
-{/* <SearchForm 
-            onChange={() => console.log('hi')}
-            className="search-form"
-          /> */}
-      
-        //   <Icons 
-        //   icons={icons}
-        // />
-
-
-        // <div >
-        //   <ul>
-        //     <span className="left-section">
-        //       <li>Products</li>
-        //       <li>Brands</li>
-        //       <li>Deals</li>
-        //       <li>Services</li>
-        //     </span>
-        //     <span className="right-section">
-        //     <li>Account</li>
-        //     <li>Recently viewed</li>
-        //     <li>Order Status</li>
-        //     <li>Saved Items</li>
-        //     </span>
-        //   </ul>
-        // </div>
