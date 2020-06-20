@@ -23,7 +23,6 @@ app.get('/api/get/products', (req, res) => {
   });
 });
 
-
 const port = 3001;
 app.listen(port, () => {
  console.log(`SearchBar listening on port:${port}`);
