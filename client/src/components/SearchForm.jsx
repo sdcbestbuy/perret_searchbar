@@ -16,7 +16,7 @@ const SearchBar = ({ suggestions }) => {
       // Filter our suggestions that don't contain the user's input
       const filteredSuggestions = suggestions.filter(
         suggestion =>
-          suggestion.name.toLowerCase().indexOf(userInput.toLowerCase()) > -1
+          suggestion.product_name.toLowerCase().indexOf(userInput.toLowerCase()) > -1
       );
       setActiveSuggestions(0);
       setFilteredSuggestions(filteredSuggestions);
@@ -78,7 +78,7 @@ const SearchBar = ({ suggestions }) => {
                 key={suggestion.id}
                 onClick={onClick}
               >
-                {suggestion.name}
+                {suggestion.product_name}
               </li>
             );
           })}

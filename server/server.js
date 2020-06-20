@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const { getAllProdcuts } = require('../db/querys');
 
-
 //Middleware
 app.use(express.static("./client/dist"));
 
@@ -13,7 +12,6 @@ app.use(express.urlencoded({extended: true}));
 
 //Routes
 app.get('/api/get/products', (req, res) => {
-    console.log(req.body);
   getAllProdcuts((err, products) => {
     if(err){
       console.log("err in server");
