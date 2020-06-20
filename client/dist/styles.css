@@ -150,3 +150,12 @@ a {
   width: 100%;
   border: 1px solid red;
 }
+
+
+/* /Sugestions dropdown */
+
+.suggestions-dropdown {
+  background-color: #ffffff;
+  list-style-type: none;
+  padding: 5px 10px 5px 10px;
+}

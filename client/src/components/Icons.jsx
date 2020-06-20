@@ -1,11 +1,6 @@
 import React from 'react';
 import Icon from './Icon.jsx';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome } from '@fortawesome/free-solid-svg-icons';
-
-
-
 const Icons = ({ icons }) => {
   return(
     <div className="icon-list">
