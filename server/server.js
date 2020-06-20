@@ -3,7 +3,6 @@ const app = express();
 const cors = require('cors');
 const { getAllProdcuts } = require('../db/querys');
 
-
 //Middleware
 app.use(express.static("./client/dist"));
 
