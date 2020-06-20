@@ -35,17 +35,21 @@ const SearchBar = ({ suggestions }) => {
 
   const onKeyDown = e => {
     if (e.keyCode === 13) {
+      //this will hopefully close the suggestion window
+      //once the user selects a suggestion with the enter key
       setActiveSuggestions(0);
       setSuggestions(false);
       setUserInput(filteredSuggestions[activeSuggestions]);
     }
     else if (e.keyCode === 38) {
+      ///up arrow changes user's selection
       if (activeSuggestions === 0) {
         return;
       }
       setActiveSuggestions(activeSuggestions -1);
     }
     else if (e.keyCode === 40) {
+      // key holding key to slect suggestions
       if (activeSuggestions - 1 === filteredSuggestions.length) {
         return;
       }
@@ -99,7 +103,9 @@ const SearchBar = ({ suggestions }) => {
           <input
             placeholder="Search Best Buy"
             type="text" 
-            value={userInput} 
+            value={userInput}
+            //this is optional might not work
+            // onKeyDown={onKeyDown}
             onChange={(e) => onChange(e)}
             className='search-bar'
           />
