@@ -4,13 +4,14 @@ import { productsData, linksData, iconsData } from './dummy-data.js';
 import LinkList from './components/LinkList.jsx';
 import LogoContainer from './components/LogoContainer.jsx';
 import Icons from './components/Icons.jsx';
+import Axios from 'axios';
 
 const Header = () => {
   const [products] = useState(productsData);
   const [links] = useState(linksData);
   const [icons] = useState(iconsData);
   const [searchTerm, setSearchTerm] = useState('');
-  console.log(products);
+
   return(
     <div className="header">
       <div className="top">
@@ -20,7 +21,7 @@ const Header = () => {
           {/* {<div className="link-container"></div>} */}
           <LinkList links={links}/>
           {/* {<div className="search-container"></div>} */}
-          <SearchForm products={products}/>
+          <SearchForm suggestions={productsData}/>
           {/*<div className="icon-list"></div>*/}
           <Icons icons={icons}/>
         </div>
