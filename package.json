@@ -1,21 +1,18 @@
 {
-  "name": "ReactBoiler",
+  "name": "search-bar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "nodemon server/server.js",
-    "dev-compile": "webpack -d -w"
+    "dev-compile": "webpack --config webpack.dev.js",
+    "prod-compile": "webpack --config webpack.prod.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ricardo Guerrero",
   "license": "ISC",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.29",
-    "@fortawesome/free-regular-svg-icons": "^5.13.1",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
-    "@fortawesome/react-fontawesome": "^0.1.11",
     "acorn": "^7.1.1",
     "axios": "^0.19.1",
     "body-parser": "^1.19.0",
@@ -35,6 +32,7 @@
     "babel-loader": "^8.0.6",
     "nodemon": "^2.0.2",
     "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
   }
 }
