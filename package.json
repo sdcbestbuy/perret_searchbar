@@ -14,6 +14,7 @@
   "author": "Ricardo Guerrero",
   "license": "ISC",
   "dependencies": {
+    "@babel/node": "^7.10.3",
     "acorn": "^7.1.1",
     "axios": "^0.19.1",
     "body-parser": "^1.19.0",
