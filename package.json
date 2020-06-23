@@ -8,7 +8,7 @@
     "dev-server": "nodemon server/server.js",
     "dev-compile": "webpack -w --config webpack.dev.js",
     "prod-compile": "webpack -w --config webpack.prod.js",
-    "start": "node ./server/server.js"
+    "start": "nodemon --exec babel-node server.js"
   },
   "keywords": [],
   "author": "Ricardo Guerrero",
