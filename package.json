@@ -1,14 +1,13 @@
 {
   "name": "search-bar",
   "version": "1.0.0",
-  "description": "",
+  "description": "hello",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev-server": "nodemon server/server.js",
     "dev-compile": "webpack -w --config webpack.dev.js",
-    "prod-compile": "webpack -w --config webpack.prod.js",
-    "start": "node server.js"
+    "prod-compile": "webpack -w --config webpack.prod.js"
   },
   "keywords": [],
   "author": "Ricardo Guerrero",
