@@ -1,10 +1,8 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
-const { getAllProdcuts } = require('../db/querys');
-const port = process.env.PORT || 3001;
-
-
+const { getAllProdcuts } = require('./db/querys');
+const port = process.env.HTTP_PORT || 3001;
 
 //Middleware
 app.use(express.static("./client/dist"));
