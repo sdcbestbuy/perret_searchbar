@@ -165,12 +165,6 @@
   font-size: 30px;
 }
 
-.bottom-div-content {
-  border: 1px solid red;
-  height: 100%;
-  padding: 0 40px; 
-}
-
 .suggestions-dropdown {
   background-color: #ffffff;
   color: #0457c8;
@@ -179,8 +173,79 @@
   border: 1px solid black;
   overflow: hidden;
   text-transform: lowercase;
+  /* z-index: 9;
+   */
+   position: relative;
 }
 
 .new-suggestion {
   color: red;
+}
+
+.bottom-div-content {
+  border: 1px solid red;
+  height: 100%;
+  padding: 0 40px; 
+  /* display: flex; */
+}
+
+.global-navigation{
+  border: 1px solid orange;
+  height: 100%;
+  width: 478px;
+  display: inline-block;
+  /* display: flex; */
+  /* z-index: 8; */
+}
+
+.global-nav-list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.gb-list-item {
+  margin-right: 20px;
+  margin-top: 7px;
+  /* vertical-align: text-bottom; */
+}
+
+.gb-list-btn {
+  color: #ffffff;
+  background-color: #0346be;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.utility-navigation-container{
+  display: inline-block;
+  height: 100%;
+  width: 700px;
+  /* shold have to do this but iy works */
+  float: right;
+}
+
+.utility-navigation{
+  border: 1px solid white;
+  height: 100%;
+  width: 100%;
+}
+
+.utility-nav-list {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.util-list-item {
+  margin-left: 36px;
+  margin-top: 7px;
+  /* vertical-align: text-bottom; */
+}
+
+.util-list-btn {
+  color: #ffffff;
+  background-color: #0346be;
+  font-size: 18px;
+  /* font-weight: 500; */
 }

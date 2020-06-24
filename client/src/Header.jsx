@@ -6,6 +6,9 @@ import LogoContainer from './components/LogoContainer.jsx';
 import Icons from './components/Icons.jsx';
 import Axios from 'axios';
 
+import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
+import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
+
 const Header = () => {
   const [products, setProducts] = useState([]);
   //TECH DEBT HERE FIX LATER
@@ -48,8 +51,24 @@ const Header = () => {
       </div>
       <div className="fullbleed-wrapper">
         <div className="bottom-div-content">
-         <div className="global-navigation"></div>
-         <div className="global-navigation"></div>
+         <nav className="global-navigation">
+           <ul className="global-nav-list">
+             <li className="gb-list-item"><a className="gb-list-btn">Products<ExpandMoreOutlinedIcon/></a></li>
+             <li className="gb-list-item"><a className="gb-list-btn">Brands<ExpandMoreOutlinedIcon/></a></li>
+             <li className="gb-list-item"><a className="gb-list-btn">Deals<ExpandMoreOutlinedIcon/></a></li>
+             <li className="gb-list-item"><a className="gb-list-btn">Services <ExpandMoreOutlinedIcon/></a></li>
+           </ul>
+         </nav>
+         <div className="utility-navigation-container">
+           <nav className="utility-navigation">
+             <ul className="utility-nav-list">
+               <li className="util-list-item"><a className="util-list-btn"><AccountCircleOutlinedIcon/>Account<ExpandMoreOutlinedIcon/></a></li>
+               <li className="util-list-item"><a className="util-list-btn">Recently Viewed<ExpandMoreOutlinedIcon/></a></li>
+               <li className="util-list-item"><a className="util-list-btn">Order Status<ExpandMoreOutlinedIcon/></a></li>
+               <li className="util-list-item"><a className="util-list-btn">Saved Items</a></li>
+             </ul>
+           </nav>
+         </div>
         </div> 
       </div>
     </div>
