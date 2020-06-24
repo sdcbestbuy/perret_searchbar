@@ -1,11 +1,10 @@
 const mysql = require('mysql');
 
 const connection = mysql.createConnection({
-  host: '70.121.184.146',
+  host: 'localhost',
   user: 'root',
   password: 'duckDuckGoose',
-  database: 'bestbuy_db',
-  port: 3001
+  database: 'bestbuy_db'
 });
 
 connection.connect();

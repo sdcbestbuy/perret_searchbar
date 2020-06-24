@@ -1,10 +1,17 @@
 import React from 'react';
 
 const Suggestions = ({ products }) => {
+
   const options = products.map((product) => {
-  return <li key={product.id}>{product.product_name}</li>
+  return <div key={product.id} className="test" >{product.product_name}</div>
   });
-return <ul className="suggestions-dropdown">{options}</ul>
+
+  return (
+    <div className="suggestions-dropdown">
+      {options}
+      <div></div>
+    </div>
+  );
 };
 
 export default Suggestions;

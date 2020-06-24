@@ -3,159 +3,184 @@
   margin: 0;
   padding: 0;
   border: 0;
-  /* vertical-align: baseline; */
+  vertical-align: baseline;
+}
+/* This is my body of my component */
+#search-bar {
+  border: 3px solid black;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
 }
 
-body {
+.header-large {
+  background-color: #0346be;
+  display: block;
+  /* Change later to be 148px */
+  height: 148px;
+  width: 100%;
+}
+
+.top-navigation-section {
+  height: 102px;
+  padding: 13px 0 13px 0;
+}
+
+.top-navigation-container {
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
+}
+
+.fullbleed-wrapper{
+  height: 45px;
+  border-top: 1px solid #4976e6;
+}
+
+.navigation-container{
+  height: 45px;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px;
   
-  border: 5px solid gray;
-  height: 140px;
-  width: 100%;
 }
-#roots {
-  display: block;
-  border: 2px solid orange;
+
+.bby-logo-lv {
+  width: 127px;
   height: 100%;
-  width: 100%;
-  background-color: #0246be;
-}
-/* This is the whole container  */
-.header {
-  display: block;
-  border: 5px solid black;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
 }
 
-/* Work on top container first */
-.top{
-  display: block;
-  width: 100%;
-  height: 80%;
-  border: 2px solid violet;
+.logo {
+  height: 72px;
+  width: 126px;
 }
-
-.bottom {
-  display: block;
-  height: 20%;
-  width: 100%;
-  border: 2px solid green;
-}
-/* Next work on top left container */
-
-.left-container {
-    display: inline-block;
-    border: 3px solid green;
-    height: 100%;
-    width: 15%;    
-    text-align: center;
-}
-
-.logo-image{
-  width: 80%;
-  height: 100%;
-}
-
-/* Next top right section */
 
 .right-container {
-  border: 3px solid red;
   display: inline-block;
+  width: calc(100% - 127px);
   height: 100%;
-  width: 85%;
+  vertical-align: top;
 }
 
-.link-container {
-    display: block;
-    width: 100%;
-    height: 35%;
-    border: 2px solid yellow;
-} 
+.top-nav-items {
+  height: 35px;
+  width: 100%;
+  border: 1px solid orange;
+  display: flex;
+  justify-content: flex-end;
+}
 
 .link-list {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   list-style-type: none;
-  color: white;
-}
-.link {
-  margin-left: 30px;
 }
 
-a {
-  color: white;
+.link {
+  color: #ffffff;
+  margin-left: 40px;
   text-decoration: none;
 }
 
-.search-container {
-    display: inline-block;
-    border: 2px solid orange;
-    width: 60%;
-    height: 65%;
-    vertical-align: top;
+.link:hover {
+  text-decoration: underline;
 }
 
-.search-form {
-  /* display: inline-block; */
-  
+
+.middle-container {
+  height: 39px;
+  width: 100%;
+  vertical-align: auto;
+  border: 1px solid black;
+  display: flex;
+}
+
+.search-bar-container {
+  margin: 0 20px 0 25px;
+  width: 800px;
+  height: 96%;
+  display: inline-block;
+  border: 1px solid pink;
 }
 
 .search-bar {
- width: 90%;
- height: 35px;
-
+  vertical-align: top;
+  display: flex;
 }
 
-.search-button{
+.search-input {
+  background: #ffffff;
+  padding: 10px 0 10px 10px;
   height: 35px;
-  background-color: #ffffff;
-  /* width: 5%; */
+  width: 566px;
+  border-radius: 4px 0 0 4px;
+
+
 }
 
+.header-search-button {
+  border-radius: 0 4px 4px 0;
+  background-color: #ffffff;
+  height: 35px;
+  width: 34px;
+  color: #0c4bc0;
+}
 .x-button {
-  height: 35px;
   background-color: #ffffff;
-  color: #0649bf;
-  font-size: 13px;
+  height: 35px;
+  width: 32px;
+  font-size: 17px;
+  color: #0c4bc0;
 }
 
-.icon-list {
-    display: inline-block;
-    border: 2px solid blueviolet;
-    width: 40%;
-    height: 65%;
-    /* vertical-align:top; */
+.middle-right{
+  width: 230px;
+  height: 37px;
+  display: inline-block;
+  border: 1px solid green;
 }
 
-.test {
-  position:absolute;
+.icon-container {
   display: flex;
   flex-direction: row;
-  list-style: none;
-  vertical-align: middle;
-  color: #ffffff;
-  text-align: center;
+  height: 100%;
 }
 
-.abc {
-  height: 100%;
-  vertical-align: middle;
-  text-align: center;
-  border-right: 1px solid white;
-  padding-right: 8px;
+.store-icon{
+  display: flex;
+  flex-direction: row;
+  border-right: 1px solid #4976e6;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.cart-icon {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+}
+
+.cart-icon-svg {
+  font-size: 30px;
 }
 
 .bottom-div-content {
-  height: 100%;
-  width: 100%;
   border: 1px solid red;
+  height: 100%;
+  padding: 0 40px; 
 }
-
-/* /Sugestions dropdown */
 
 .suggestions-dropdown {
   background-color: #ffffff;
-  list-style-type: none;
-  padding: 5px 10px 5px 10px;
+  color: #0457c8;
+  max-height: 600px;
+  padding: 10px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-transform: lowercase;
+}
+
+.new-suggestion {
+  color: red;
 }

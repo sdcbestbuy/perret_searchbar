@@ -8,4 +8,4 @@ if (process.env.NODE_ENV !== 'production') {
     console.log('App running in production mode!');
 }
 
-ReactDOM.render(<Header/>, document.getElementById("roots"));
+ReactDOM.render(<Header/>, document.getElementById("search-bar"));
