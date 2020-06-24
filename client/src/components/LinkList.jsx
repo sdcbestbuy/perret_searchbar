@@ -3,7 +3,7 @@ import Link from './Link.jsx';
 
 const LinkList = ({ links }) => {
   return(
-    <div className="link-container">
+    <nav className="top-nav-items">
       <ul className="link-list">
         {links.map((link, i) => {
             return <Link 
@@ -12,7 +12,7 @@ const LinkList = ({ links }) => {
             />
         })}
       </ul>
-    </div>
+    </nav>
   );
 };
 

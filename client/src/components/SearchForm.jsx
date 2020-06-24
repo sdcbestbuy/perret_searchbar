@@ -1,5 +1,6 @@
 import React, { useState, useEffect }from 'react';
-
+import SearchIcon from '@material-ui/icons/Search';
+import ClearIcon from '@material-ui/icons/Clear';
 import Suggestions from './Suggestions.jsx';
 
 const SearchBar = ({ suggestions }) => {
@@ -65,7 +66,7 @@ const SearchBar = ({ suggestions }) => {
       <button 
         onClick={() => setUserInput('')}
         className="x-button"
-      >X</button>
+      ><ClearIcon/></button>
     );
     if (filteredSuggestions.length) { 
       suggestionsListComponent = (
@@ -98,8 +99,8 @@ const SearchBar = ({ suggestions }) => {
   }
 
     return(
-      <div className="search-container">
-        <form className="search-from">
+      <div className="search-bar-container">
+        <form className="search-bar">
           <input
             placeholder="Search Best Buy"
             type="text" 
@@ -107,13 +108,13 @@ const SearchBar = ({ suggestions }) => {
             //this is optional might not work
             // onKeyDown={onKeyDown}
             onChange={(e) => onChange(e)}
-            className='search-bar'
+            className="search-input"
           />
           {/*component*/}
           {clearInputButton}
           <button
-          className="search-button"
-          >Search</button>
+          className="header-search-button"
+          ><SearchIcon/></button>
         </form>
         {suggestionsListComponent}
       </div>
