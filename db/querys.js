@@ -8,7 +8,13 @@ const connection = mysql.createConnection({
   port: 3306
 });
 
-connection.connect();
+connection.connect((err) => {
+  if(err){
+    console.log("error connectiong to db", err);
+  } else {
+    console.log("connected to db");
+  }
+});
 
 const getAllProdcuts = (cb) => {
   connection.query('SELECT * FROM products', (err, data) => {
