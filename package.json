@@ -8,12 +8,13 @@
     "dev-server": "nodemon server.js",
     "dev-compile": "webpack -w --config webpack.dev.js",
     "prod-compile": "webpack -w --config webpack.prod.js",
-    "start": "node server.js"
+    "start": "nodemon --exec babel-node server.js"
   },
   "keywords": [],
   "author": "Ricardo Guerrero",
   "license": "ISC",
   "dependencies": {
+    "@babel/cli": "^7.10.3",
     "@babel/node": "^7.10.3",
     "@material-ui/core": "^4.10.2",
     "@material-ui/icons": "^4.9.1",
