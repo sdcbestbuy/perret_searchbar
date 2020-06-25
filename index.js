@@ -29,7 +29,6 @@ app.get('/api/get/products', function (req, res) {
     }
   });
 });
-
 app.listen(port, function () {
   console.log("SearchBar listening on port:".concat(port));
 });
