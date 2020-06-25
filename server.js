@@ -16,16 +16,12 @@ app.get('/api/get/products', (req, res) => {
   getAllProdcuts((err, products) => {
     if(err){
       console.log("err in server");
-      res.status(404).send(err);
+      res.sendStatus(404);
     } else {
       console.log("sucessful retrival of all products");
       res.status(200).send(products);
     }
   });
-});
-
-app.get('/', (req, res) => {
-  res.send('This is a test');
 });
 
 app.listen(port, () => {
