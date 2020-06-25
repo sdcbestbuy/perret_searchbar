@@ -7,7 +7,13 @@ const connection = mysql.createConnection({
   database: 'bestbuy_db'
 });
 
-connection.connect();
+connection.connect((err) => {
+  if(err){
+    console.log("error connectiong to db", err);
+  } else {
+    console.log("connected to db");
+  }
+});
 
 const getAllProdcuts = (cb) => {
   connection.query('SELECT * FROM products', (err, data) => {
