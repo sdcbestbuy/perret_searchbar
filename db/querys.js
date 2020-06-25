@@ -4,8 +4,7 @@ const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password: 'duckDuckGoose',
-  database: 'bestbuy_db',
-  port: 3306
+  database: 'bestbuy_db'
 });
 
 connection.connect((err) => {
