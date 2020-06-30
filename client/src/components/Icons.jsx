@@ -1,7 +1,6 @@
 import React from 'react';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
-
 const Icons = () => {
 
   return(
@@ -11,7 +10,7 @@ const Icons = () => {
          <p>North Star</p>
        </div>
        <div className="cart-icon">
-         <ShoppingCartOutlinedIcon/>
+         <ShoppingCartOutlinedIcon fontSize="large"/>
          <p>Cart</p>
        </div>
     </div>
