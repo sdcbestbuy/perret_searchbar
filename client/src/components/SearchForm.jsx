@@ -1,15 +1,32 @@
 import React, { useState, useEffect }from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ClearIcon from '@material-ui/icons/Clear';
-import Suggestions from './Suggestions.jsx';
+import Axios from 'axios';
+
 
 const SearchBar = ({ suggestions }) => {
-
+    //userInput is State, set state is 2nd argument (String)
     const [userInput, setUserInput] = useState('');
+    // Index of item that is selected by user (Number)
     const [activeSuggestions, setActiveSuggestions] = useState(0);
+    // List of items from db that match filter ---
     const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+    // Boolean Value to show or display suggestions ---
     const [showSuggestions, setSuggestions] = useState(false);
-    
+    //test
+    const [selectedSuggestion, setSelectedSuggestion] = useState({});
+
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      alert("Submit event triggered");
+      if(selectedSuggestion){
+        // console.log(selectedSuggestion.id);
+        window.id = selectedSuggestion.id;
+        // tellOtherComponents(userInput); //Comment Back in to test Other component send req
+      }
+      console.log(window.id);
+    };
+
     const onChange = e => {
       // const { suggestions } = this.props;
       const userInput = e.currentTarget.value;
@@ -32,24 +49,29 @@ const SearchBar = ({ suggestions }) => {
     setFilteredSuggestions([]);
     setSuggestions(false);
     setUserInput(e.currentTarget.innerText);
+    setSelectedSuggestion(filteredSuggestions[activeSuggestions]);
   };
 
   const onKeyDown = e => {
-    if (e.keyCode === 13) {
-      //this will hopefully close the suggestion window
-      //once the user selects a suggestion with the enter key
+    if (e.keyCode === 13) {   //Enter key
+      //reset index
       setActiveSuggestions(0);
+      setFilteredSuggestions([]);
+      //stop showing dropdown
       setSuggestions(false);
-      setUserInput(filteredSuggestions[activeSuggestions]);
+      // set state for 
+      setUserInput('chnage');
+      //
+      setSelectedSuggestion(filteredSuggestions[activeSuggestions]);
     }
-    else if (e.keyCode === 38) {
+    else if (e.keyCode === 38) { //Up arrow key
       ///up arrow changes user's selection
       if (activeSuggestions === 0) {
         return;
       }
       setActiveSuggestions(activeSuggestions -1);
     }
-    else if (e.keyCode === 40) {
+    else if (e.keyCode === 40) { //down arrow
       // key holding key to slect suggestions
       if (activeSuggestions - 1 === filteredSuggestions.length) {
         return;
@@ -58,16 +80,26 @@ const SearchBar = ({ suggestions }) => {
     }
   };
 
+  const handleClear = () => {
+    //reset state
+    setUserInput('');
+    setSelectedSuggestion({});
+  };
+
   let suggestionsListComponent;
   let clearInputButton;
 
-  if (showSuggestions && userInput) {
+  //If userinpit is not empty
+  if(userInput){
     clearInputButton = (
       <button 
-        onClick={() => setUserInput('')}
+        onClick={handleClear}
         className="x-button"
       ><ClearIcon/></button>
     );
+  }
+
+  if (showSuggestions && userInput) {
     if (filteredSuggestions.length) { 
       suggestionsListComponent = (
         <ul className="suggestions-dropdown">
@@ -76,7 +108,7 @@ const SearchBar = ({ suggestions }) => {
             if (index === activeSuggestions) {
               className = "suggestion-active";
             }
-            console.log('www', suggestion);
+            // console.log('suggestion:', suggestion);
             return (
               <li
                 className={className}
@@ -92,7 +124,7 @@ const SearchBar = ({ suggestions }) => {
     } else {
       suggestionsListComponent = (
         <div className="suggestions-dropdown">
-          <em>There is nothing on the store matching your search, plase try something else.</em>
+          <em>There is nothing on the store matching your search, please try something else.</em>
         </div>
       );
     }
@@ -100,17 +132,15 @@ const SearchBar = ({ suggestions }) => {
 
     return(
       <div className="search-bar-container">
-        <form className="search-bar">
+        <form className="search-bar" onSubmit={handleSubmit}>
           <input
             placeholder="Search Best Buy"
             type="text" 
             value={userInput}
-            //this is optional might not work
-            // onKeyDown={onKeyDown}
-            onChange={(e) => onChange(e)}
+            onKeyDown={onKeyDown}
+            onChange={onChange}
             className="search-input"
           />
-          {/*component*/}
           {clearInputButton}
           <button
           className="header-search-button"
