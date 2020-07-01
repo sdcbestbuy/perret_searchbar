@@ -98,7 +98,7 @@
 
 .search-bar-container {
   margin: 0 20px 0 25px;
-  width: 800px;
+  width: 60%;
   height: 96%;
   display: inline-block;
   /* border: 1px solid pink; */
@@ -133,16 +133,20 @@
 }
 
 .middle-right{
-  width: 230px;
+  width: 40%;
   height: 37px;
   display: inline-block;
   /* border: 1px solid green; */
+  /* float: right; */
+  display: flex;
+  justify-content: flex-end;
 }
 
 .icon-container {
   display: flex;
   flex-direction: row;
   height: 100%;
+  /* float: right; */
 }
 
 .store-icon{
@@ -172,6 +176,18 @@
   overflow: hidden;
   text-transform: lowercase;
   position: relative;
+}
+
+.suggestions {
+  padding: 5px;
+}
+
+.suggestion-active,
+.suggestions li:hover {
+  background-color: lightgray;
+  color: darkblue;
+  cursor: pointer;
+  font-weight: 700;
 }
 
 .new-suggestion {
