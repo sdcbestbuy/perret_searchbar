@@ -5,6 +5,7 @@
   border: 0;
   vertical-align: baseline;
 }
+
 /* This is my body of my component */
 #search-bar {
   /* border: 3px solid black; */
@@ -20,6 +21,7 @@
   /* Change later to be 148px */
   height: 148px;
   width: 100%;
+  
 }
 
 .top-navigation-section {
@@ -35,7 +37,7 @@
 
 .fullbleed-wrapper{
   height: 45px;
-  border-top: 1px solid #4976e6;
+  border-top: 1px solid #4976e6; 
 }
 
 .navigation-container{
@@ -87,7 +89,6 @@
 .link:hover {
   text-decoration: underline;
 }
-
 
 .middle-container {
   height: 39px;
@@ -397,59 +398,102 @@
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
 
-/* starts  */
-
+/* starts end */
+/* acc-icon */
 
 /* Responsive media queries */
-@media only screen and (max-width: 800px) {
-  body {
-    background-color: red;
+@media only screen and (max-width: 1000px) {
+  .btm-link-name {
+    font-size: 13px;
+  }
+  .link {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 888px) {
+  .btm-link-name {
+    font-size: 13px;
+  }
+  .link {
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {  
+  .btm-link-name {
+    font-size: 13px;
+  }
+  .link {
+    display: none;
+  }
+  .top-navigation-container{
+    padding: 0;
+  }
+  .top-nav-items{
+    display: none;
+  }
+
+  .top-navigation-section {
+    padding: 0;
+    height: 100%;
+    display: flex;
+    vertical-align: middle;
   }
   
-  .top-navigation-section {
-    height: 100%;
-    padding: 13px 0 13px 0;
-  }
   .bby-logo-lv{
     height: 100%;
     text-align: center;
     vertical-align: middle;
-    /* position: absolute; */
-    display: table-cell;
+    /* display: table-cell; */
+    /* border: 1px solid orange; */
   }
 
   .logo {
+    /* border: 1px solid green; */
     height: 45px;
     width: 79px;
     display: inline-block;
+    margin-top: 50px;
   }
-  .top-nav-items {
-    display: none;
-  }
-  .middle-container{
+
+  .right-container {
     height: 100%;
-    display: flex;
-    justify-content: flex-start;
-    /* position: absolute; */
+    text-align: center;
     vertical-align: middle;
-    /* position: absolute; */
-    display: table-cell;
+    display: inline-block;
+    /* border: 1px solid red; */
   }
-  .icon-container{
-    /* margin-left: 80px; */
+
+  .middle-container {
+    /* border: 1px solid pink; */
     display: flex;
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
   }
+
+  .search-bar-container {
+    width: 80%;
+    /* display: inline-block; */
+    margin: 0;
+  }
+  .search-bar{
+    width: 100%;
+    padding: 0;
+    margin-right: 100px;
+  }
+
+  .middle-right {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+
   .cart-icon-svg {
     font-size: 10px;
   }
-  .utility-navigation-container{
-    display: none;
-  }
-  .global-navigation{
-    display: none;
-  }
+ 
   .store-icon{
     display: none;
   }
@@ -459,4 +503,34 @@
   .cart-icon-text{
     display: none;
   }
+
+  @media only screen and (max-width: 666px){
+     .right-suggestion-container {
+       display: none;
+     }
+     .left-suggestion-container{
+       width: 100%;
+     }
+     .suggestion {
+       border: 0;
+     }
+     .bby-logo-lv {
+       width: 15%;
+     }
+
+     @media only screen and (max-width: 500px) {
+      .bby-logo-lv {
+        width: 10%;
+        margin-right: 60px;
+      }
+     }
+
+     @media only screen and (max-width: 378px) {
+      .middle-right {
+        display: none;
+      }
+     }
+  }
+
 }
+

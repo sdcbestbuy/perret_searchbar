@@ -2,7 +2,11 @@ import React from 'react';
 
 const Link = ({ link }) => {
   return(
-    <li><a className="link" href="#">{link.name}</a></li>
+    <li>
+      <a className="link" href="#">
+        {link.name}
+      </a>
+    </li>
   );
 };
 

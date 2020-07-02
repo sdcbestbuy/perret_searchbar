@@ -53,19 +53,59 @@ const Header = () => {
         <div className="bottom-div-content">
          <nav className="global-navigation">
            <ul className="global-nav-list">
-             <li className="gb-list-item"><a className="gb-list-btn">Products<ExpandMoreOutlinedIcon/></a></li>
-             <li className="gb-list-item"><a className="gb-list-btn">Brands<ExpandMoreOutlinedIcon/></a></li>
-             <li className="gb-list-item"><a className="gb-list-btn">Deals<ExpandMoreOutlinedIcon/></a></li>
-             <li className="gb-list-item"><a className="gb-list-btn">Services <ExpandMoreOutlinedIcon/></a></li>
+             <li className="gb-list-item">
+               <a className="gb-list-btn">
+                <p className="btm-link-name">Products</p>
+                {/* <ExpandMoreOutlinedIcon/> */}
+               </a>
+              </li>
+             <li className="gb-list-item">
+               <a className="gb-list-btn">
+                 <p className="btm-link-name">Brands</p>
+                 {/* <ExpandMoreOutlinedIcon/> */}
+               </a>
+             </li>
+             <li className="gb-list-item">
+               <a className="gb-list-btn">
+                 <p className="btm-link-name">Deals</p>
+                 {/* <ExpandMoreOutlinedIcon/> */}
+               </a>
+             </li>
+             <li className="gb-list-item">
+               <a className="gb-list-btn">
+                 <p className="btm-link-name">Services</p>
+                 {/* <ExpandMoreOutlinedIcon/> */}
+              </a>
+             </li>
            </ul>
          </nav>
          <div className="utility-navigation-container">
            <nav className="utility-navigation">
              <ul className="utility-nav-list">
-               <li className="util-list-item"><a className="util-list-btn"><AccountCircleOutlinedIcon/>Account<ExpandMoreOutlinedIcon/></a></li>
-               <li className="util-list-item"><a className="util-list-btn">Recently Viewed<ExpandMoreOutlinedIcon/></a></li>
-               <li className="util-list-item"><a className="util-list-btn">Order Status<ExpandMoreOutlinedIcon/></a></li>
-               <li className="util-list-item"><a className="util-list-btn">Saved Items</a></li>
+               <li className="util-list-item">
+                 <a className="util-list-btn">
+                   {/* <AccountCircleOutlinedIcon className="acc-icon"/> */}
+                   <p className="btm-link-name">Account</p>
+                   {/* <ExpandMoreOutlinedIcon className="acc-icon"/> */}
+                  </a>
+               </li>
+               <li className="util-list-item">
+                <a className="util-list-btn">
+                  <p className="btm-link-name">Recently Viewed</p>
+                  {/* <ExpandMoreOutlinedIcon/> */}
+                </a>
+               </li>
+               <li className="util-list-item">
+                 <a className="util-list-btn">
+                   <p className="btm-link-name">Order Status</p>
+                   {/* <ExpandMoreOutlinedIcon/> */}
+                  </a>
+                </li>
+               <li className="util-list-item">
+                 <a className="util-list-btn">
+                   <p className="btm-link-name">Saved Items</p>
+                 </a>
+               </li>
              </ul>
            </nav>
          </div>
