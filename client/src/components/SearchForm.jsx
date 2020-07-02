@@ -18,7 +18,7 @@ const SearchBar = ({ suggestions }) => {
 
     const handleSubmit = (event) => {
       event.preventDefault();
-      // alert("Submit event triggered");
+      // remove before deploy
       console.log("Submit event triggered search-bar");
       console.log(selectedSuggestion);
       if(selectedSuggestion) {
