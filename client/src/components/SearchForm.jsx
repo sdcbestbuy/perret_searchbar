@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ClearIcon from '@material-ui/icons/Clear';
 import Starts from './Stars.jsx';
@@ -21,10 +21,8 @@ const SearchBar = ({ suggestions }) => {
       // alert("Submit event triggered");
       console.log("Submit event triggered search-bar");
       console.log(selectedSuggestion);
-      if(selectedSuggestion){
-        // console.log(selectedSuggestion.id);
+      if(selectedSuggestion) {
         window.id = selectedSuggestion.id;
-        // tellOtherComponents(userInput); //Comment Back in to test Other component send req
       }
       console.log(window.id);
     };
@@ -32,18 +30,15 @@ const SearchBar = ({ suggestions }) => {
     const onChange = e => {
       //set state to currently typed input
       const userInput = e.currentTarget.value;
-      
       // Filter out suggestions that don't contain the user's input
       let filteredSuggestions1 = suggestions.filter(
         suggestion =>
           suggestion.product_name.toLowerCase().indexOf(userInput.toLowerCase()) > -1
       );
       //limit the size of the suggestion list
-      if(filteredSuggestions1.length > 13){
-        // console.log("heheh"); 
+      if(filteredSuggestions1.length > 13) {
         filteredSuggestions1 = filteredSuggestions1.slice(0, 14);
       }
-      // console.log("yolo", filteredSuggestions1);
       //initialize index
       setActiveSuggestions(0);
       //filter as it changes
@@ -71,8 +66,7 @@ const SearchBar = ({ suggestions }) => {
   };
 
   const onKeyDown = e => {
-    
-    if (e.keyCode === 13) {   //Enter key
+    if (e.keyCode === 13) {   //enter key
       // prevent form from submmiting on enter
       e.preventDefault();
       //reset index
@@ -119,7 +113,9 @@ const SearchBar = ({ suggestions }) => {
       <button 
         onClick={ handleClear }
         className="x-button"
-      ><ClearIcon/></button>
+      >
+        <ClearIcon/>
+      </button>
     );
   }
 
@@ -128,22 +124,24 @@ const SearchBar = ({ suggestions }) => {
       suggestionsListComponent = (
         <div className="suggestions-dropdown">
           <div className="left-suggestion-container">
-          { filteredSuggestions.map((suggestion, index) => {
-            let className = 'suggestion ';
-            //conditional styling
-            if (index === activeSuggestions) {
-              className += "suggestion-active";
-            }
-            return (
-              <div
-                className={ className }
-                key={ suggestion.id }
-                onClick={ onClick }
-              >
-                { suggestion.product_name }
-              </div>
-            );
-          })}
+            { filteredSuggestions.map((suggestion, index) => {
+              //whitespace needed
+              let className = 'suggestion ';
+              //conditional styling
+              if (index === activeSuggestions) {
+                className += "suggestion-active";
+              }
+
+              return (
+                <div
+                  className={ className }
+                  key={ suggestion.id }
+                  onClick={ onClick }
+                >
+                  { suggestion.product_name }
+                </div>
+              );
+            })}
           </div>
           <div className="right-suggestion-container">
             <div className="dd-img-containers">
@@ -180,7 +178,9 @@ const SearchBar = ({ suggestions }) => {
           { clearInputButton }
           <button
           className="header-search-button"
-          ><SearchIcon/></button>
+          >
+            <SearchIcon/>
+          </button>
         </form>
         { suggestionsListComponent }
       </div>
@@ -188,4 +188,3 @@ const SearchBar = ({ suggestions }) => {
 };
 
 export default SearchBar;
-
