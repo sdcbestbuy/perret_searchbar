@@ -159,7 +159,6 @@ const SearchBar = ({ suggestions }) => {
           <div className="right-suggestion-container">
             <div className="dd-img-containers">
               <div>
-                {console.log("another test",filteredSuggestions[activeSuggestions])}
                 <img className="dd-img" src={ filteredSuggestions[activeSuggestions].thumbnailImage }/>
                 <p className="dd-name">{ filteredSuggestions[activeSuggestions].product_name }</p>
                 <p>
