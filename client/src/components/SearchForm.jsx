@@ -96,15 +96,13 @@ const SearchBar = ({ suggestions }) => {
     }
     else if (e.keyCode === 40) { //down arrow
       // key holding key to slect suggestions
-      console.log("active suggestions", activeSuggestions);
-      console.log("suggestionsSizeLimit", suggestionsSizeLimit);
-      if (activeSuggestions  === suggestionsSizeLimit - 1) {
-        //if you reach the end of the index loop back to zero
-        return;
-        // setActiveSuggestions(0);
+      if (activeSuggestions  === filteredSuggestions.length - 1) {
+        //re-loop
+        setActiveSuggestions(0);
+      } else {
+        //increment index by 1
+        setActiveSuggestions(activeSuggestions + 1);
       }
-      //increment index by 1
-      setActiveSuggestions(activeSuggestions + 1);
     }
   };
 
@@ -164,7 +162,9 @@ const SearchBar = ({ suggestions }) => {
                 {console.log("another test",filteredSuggestions[activeSuggestions])}
                 <img className="dd-img" src={ filteredSuggestions[activeSuggestions].thumbnailImage }/>
                 <p className="dd-name">{ filteredSuggestions[activeSuggestions].product_name }</p>
-                <p> { filteredSuggestions[activeSuggestions].regularPrice } </p>
+                <p>
+                  { filteredSuggestions[activeSuggestions].regularPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD'}) }
+                </p>
                 <Starts product={ filteredSuggestions[activeSuggestions] }/>
               </div>
             </div>
