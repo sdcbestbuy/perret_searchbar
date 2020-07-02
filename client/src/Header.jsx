@@ -24,7 +24,7 @@ const Header = () => {
     Axios.get('/api/get/products')
     .then((result) => {
       let allProducts = result.data;
-      console.log(allProducts);
+      // console.log(allProducts);
       setProducts(allProducts);
     })
     .catch((err) => {
