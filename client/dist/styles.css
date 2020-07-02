@@ -447,14 +447,15 @@
     text-align: center;
     vertical-align: middle;
     /* display: table-cell; */
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
   }
 
   .logo {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 45px;
     width: 79px;
     display: inline-block;
+    margin-top: 50px;
   }
 
   .right-container {
@@ -462,13 +463,14 @@
     text-align: center;
     vertical-align: middle;
     display: inline-block;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
 
   .middle-container {
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
     display: flex;
     justify-content: center;
+    margin-top: 50px;
   }
 
   .search-bar-container {
@@ -501,4 +503,34 @@
   .cart-icon-text{
     display: none;
   }
+
+  @media only screen and (max-width: 666px){
+     .right-suggestion-container {
+       display: none;
+     }
+     .left-suggestion-container{
+       width: 100%;
+     }
+     .suggestion {
+       border: 0;
+     }
+     .bby-logo-lv {
+       width: 15%;
+     }
+
+     @media only screen and (max-width: 500px) {
+      .bby-logo-lv {
+        width: 10%;
+        margin-right: 60px;
+      }
+     }
+
+     @media only screen and (max-width: 378px) {
+      .middle-right {
+        display: none;
+      }
+     }
+  }
+
 }
+
