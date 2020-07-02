@@ -16,6 +16,9 @@ const SearchBar = ({ suggestions }) => {
     //test
     const [selectedSuggestion, setSelectedSuggestion] = useState({});
 
+    //limit the size of the suggestion list
+    const suggestionsSizeLimit = 13; 
+
     const handleSubmit = (event) => {
       event.preventDefault();
       // remove before deploy
@@ -35,9 +38,10 @@ const SearchBar = ({ suggestions }) => {
         suggestion =>
           suggestion.product_name.toLowerCase().indexOf(userInput.toLowerCase()) > -1
       );
-      //limit the size of the suggestion list
-      if(filteredSuggestions1.length > 13) {
-        filteredSuggestions1 = filteredSuggestions1.slice(0, 14);
+      
+      //set a suggestion limit ammounnt to the size limmit
+      if ( filteredSuggestions1.length >  suggestionsSizeLimit ) {
+        filteredSuggestions1 = filteredSuggestions1.slice(0, suggestionsSizeLimit);
       }
       //initialize index
       setActiveSuggestions(0);
@@ -92,12 +96,13 @@ const SearchBar = ({ suggestions }) => {
     }
     else if (e.keyCode === 40) { //down arrow
       // key holding key to slect suggestions
-      if (activeSuggestions === filteredSuggestions.length - 1) {
-        //if you reach the end of the index loop back to zero
+      if (activeSuggestions  === filteredSuggestions.length - 1) {
+        //re-loop
         setActiveSuggestions(0);
+      } else {
+        //increment index by 1
+        setActiveSuggestions(activeSuggestions + 1);
       }
-      //increment index by 1
-      setActiveSuggestions(activeSuggestions + 1);
     }
   };
 
@@ -156,7 +161,9 @@ const SearchBar = ({ suggestions }) => {
               <div>
                 <img className="dd-img" src={ filteredSuggestions[activeSuggestions].thumbnailImage }/>
                 <p className="dd-name">{ filteredSuggestions[activeSuggestions].product_name }</p>
-                <p> { filteredSuggestions[activeSuggestions].regularPrice } </p>
+                <p>
+                  { filteredSuggestions[activeSuggestions].regularPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD'}) }
+                </p>
                 <Starts product={ filteredSuggestions[activeSuggestions] }/>
               </div>
             </div>
