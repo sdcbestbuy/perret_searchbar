@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SearchIcon from '@material-ui/icons/Search';
 import ClearIcon from '@material-ui/icons/Clear';
 import Starts from './Stars.jsx';
+import shorthenNameOnHyphen from '../../../helpers/shorthenNameOnHyphen.js';
 
 
 const SearchBar = ({ suggestions }) => {
@@ -144,27 +145,32 @@ const SearchBar = ({ suggestions }) => {
               if (index === activeSuggestions) {
                 className += "suggestion-active";
               }
-
+              //  console.log(shorthenNameOnHyphen);
               return (
                 <div
                   className={ className }
                   key={ suggestion.id }
                   onClick={ onClick }
                 >
-                  { suggestion.product_name }
+                  { shorthenNameOnHyphen(suggestion.product_name) }
                 </div>
               );
             })}
           </div>
           <div className="right-suggestion-container">
-            <div className="dd-img-containers">
+            <div className="dd-product-container">
               <div>
-                <img className="dd-img" src={ filteredSuggestions[activeSuggestions].thumbnailImage }/>
+                <div className="dd-img-container">
+                  <img className="dd-img" src={ filteredSuggestions[activeSuggestions].product_image }/>
+                </div>
                 <p className="dd-name">{ filteredSuggestions[activeSuggestions].product_name }</p>
                 <p>
                   { filteredSuggestions[activeSuggestions].regularPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD'}) }
                 </p>
                 <Starts product={ filteredSuggestions[activeSuggestions] }/>
+                <p className="dd-description">
+                  { filteredSuggestions[activeSuggestions].shortDescription}
+                </p>
               </div>
             </div>
           </div>
