@@ -11,7 +11,7 @@ const Icons = () => {
        </div>
        <div className="cart-icon">
          <ShoppingCartOutlinedIcon fontSize="large"/>
-         <p>Cart</p>
+         <p className="cart-icon-text">Cart</p>
        </div>
     </div>
   );

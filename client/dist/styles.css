@@ -8,6 +8,7 @@
 /* This is my body of my component */
 #search-bar {
   /* border: 3px solid black; */
+  font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   color: #ffffff;
   width: 100%;
   height: 100%;
@@ -170,22 +171,70 @@
 .suggestions-dropdown {
   background-color: #ffffff;
   color: #0457c8;
+  /* #105cca */
   max-height: 600px;
   padding: 10px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   overflow: hidden;
   text-transform: lowercase;
   position: relative;
+  /* might not work */
+  display: flex;
+  /* Box shadow with polyfill*/
+  -webkit-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.14);
+  -moz-box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.14);
+  box-shadow: 2px 6px 10px 2px rgba(0,0,0,0.14);
+}
+
+.left-suggestion-container {
+  width: 50%;
+  border: 1px solid orange;
+  display: inline-block;
+}
+
+.right-suggestion-container {
+  width: 50%;
+  border: 1px solid red;
+  display: inline-block;
+  height: 100%;
+  /* display: flex; */
+}
+
+.suggestion {
+  border-right: 1px solid lightblue;
+  width: 100%;
+  padding-right: 5px;
 }
 
 .suggestions {
   padding: 5px;
 }
 
+.dd-img-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+.dd-img {
+  padding: 5px;
+  display: inline-block;
+
+}
+
+.dd-name{
+  display: inline-block;
+  font-size: 13px;
+}
+
 .suggestion-active,
 .suggestions li:hover {
   background-color: lightgray;
-  color: darkblue;
+  /* background-color: #70757A; */
+    /* font-family: Roboto,arial,sans-serif; */
+  color: #105cca;
   cursor: pointer;
   font-weight: 700;
 }
@@ -204,7 +253,8 @@
 .global-navigation{
   /* border: 1px solid orange; */
   height: 100%;
-  width: 478px;
+  /* width: 478px; */
+  width: 50%;
   display: inline-block;
 }
 
@@ -230,7 +280,8 @@
 .utility-navigation-container{
   display: inline-block;
   height: 100%;
-  width: 700px;
+  /* width: 700px; */
+  width: 50%;
   /* shold have to do this but iy works */
   float: right;
 }
@@ -258,4 +309,133 @@
   background-color: #0346be;
   font-size: 18px;
   /* font-weight: 500; */
+}
+
+/* starts */
+
+.review {
+  grid-area: review;
+  padding: 0px;
+}
+.ulReviews {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
+  font-size: 8px;
+}
+.liDiv {
+  font-size: .75em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  right: 5px;
+}
+.liReviews {
+  border-right: none;
+  position: relative;
+  right: 10px;
+  list-style: none;
+  
+}
+.stars {
+  position: relative;
+  height: 22px;
+  left: 3px;
+  right: 10px;
+  display: inline-flex;
+  transform: scale(0.8);
+}
+.totalReviews {
+  float: right;
+  font-size: 11px;
+  color: #0457c8;
+  cursor: pointer;
+  text-align: -webkit-match-parent;
+}
+.itemRating {
+  box-sizing:border-box;
+  color:rgb(4, 87, 200);
+  cursor:pointer;
+  display:block;
+  font-family:'Nunito', Arial, Helvetica, sans-serif;
+  font-size:11px;
+  height: auto;
+  line-height:normal;
+  list-style-image:none;
+  list-style-position:outside;
+  list-style-type:none;
+  text-align:right;
+  text-size-adjust: 100%;
+  visibility:visible;
+  white-space:normal;
+  width: 50%;
+  -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+/* starts  */
+
+
+/* Responsive media queries */
+@media only screen and (max-width: 800px) {
+  body {
+    background-color: red;
+  }
+  
+  .top-navigation-section {
+    height: 100%;
+    padding: 13px 0 13px 0;
+  }
+  .bby-logo-lv{
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    /* position: absolute; */
+    display: table-cell;
+  }
+
+  .logo {
+    height: 45px;
+    width: 79px;
+    display: inline-block;
+  }
+  .top-nav-items {
+    display: none;
+  }
+  .middle-container{
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    /* position: absolute; */
+    vertical-align: middle;
+    /* position: absolute; */
+    display: table-cell;
+  }
+  .icon-container{
+    /* margin-left: 80px; */
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .cart-icon-svg {
+    font-size: 10px;
+  }
+  .utility-navigation-container{
+    display: none;
+  }
+  .global-navigation{
+    display: none;
+  }
+  .store-icon{
+    display: none;
+  }
+  .fullbleed-wrapper{
+    display: none;
+  }
+  .cart-icon-text{
+    display: none;
+  }
 }
