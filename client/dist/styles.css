@@ -21,12 +21,20 @@
   /* Change later to be 148px */
   height: 148px;
   width: 100%;
-  
+  /* display: flex; */
+  /* justify-content: center;
+   */
+   text-align: center;
+
+  margin: 0 auto;
 }
 
 .top-navigation-section {
   height: 102px;
   padding: 13px 0 13px 0;
+  /* border: 1px solid pink; */
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .top-navigation-container {
@@ -40,12 +48,17 @@
   border-top: 1px solid #4976e6; 
 }
 
+.bottom-div-content {
+  /* border: 1px solid pink; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .navigation-container{
   height: 45px;
   width: 100%;
   height: 100%;
   padding: 0 40px;
-  
 }
 
 .bby-logo-lv {
