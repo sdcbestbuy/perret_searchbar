@@ -49,7 +49,6 @@ const SearchBar = ({ suggestions }) => {
       setUserInput(e.currentTarget.value);
     };
 
-
   const onClick = e => {
     // reset search index
     setActiveSuggestions(0);
@@ -85,29 +84,38 @@ const SearchBar = ({ suggestions }) => {
     else if (e.keyCode === 38) { //Up arrow key
       ///up arrow changes user's selection
       if (activeSuggestions === 0) {
+        //don't do anything
         return;
       }
+      //decrease active index by 1
       setActiveSuggestions(activeSuggestions -1);
     }
     else if (e.keyCode === 40) { //down arrow
       // key holding key to slect suggestions
-      if (activeSuggestions - 1 === filteredSuggestions.length) {
-        return;
+      if (activeSuggestions === filteredSuggestions.length - 1) {
+        //if you reach the end of the index loop back to zero
+        setActiveSuggestions(0);
       }
+      //increment index by 1
       setActiveSuggestions(activeSuggestions + 1);
     }
   };
 
+  //function triggered by the x button
   const handleClear = () => {
     //reset state
+    //reset user input
     setUserInput('');
+    // reset select item
     setSelectedSuggestion({});
+    //reset filtered suggestions
+    setFilteredSuggestions([]);
   };
 
   let suggestionsListComponent;
   let clearInputButton;
 
-  //If userinpit is not empty
+  //If user input is not empty
   if(userInput){
     clearInputButton = (
       <button 
