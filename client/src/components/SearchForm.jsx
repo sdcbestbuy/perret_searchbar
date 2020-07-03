@@ -145,7 +145,7 @@ const SearchBar = ({ suggestions }) => {
               if (index === activeSuggestions) {
                 className += "suggestion-active";
               }
-              //  console.log(shorthenNameOnHyphen);
+              //
               return (
                 <div
                   className={ className }
