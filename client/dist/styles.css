@@ -6,26 +6,34 @@
   vertical-align: baseline;
 } */
 
+/* html,
 body {
-  border: 3px solid red;
+  height: 100%;
+  width: 100%;
+} */
+
+body {
+  margin: 0;
 }
 
 /* This is my body of my component */
 #search-bar {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   margin: 0;
-  padding: 0;
-  border: 0;
+  /* padding: 0; */
+  /* border: 0; */
 
+  display: block;
   /* border: 3px solid black; */
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   color: #ffffff;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 148px;
+  /* position: relative; */
 }
 
 .header-large {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   /* margin: 0; */
   padding: 0;
   border: 0;
@@ -71,21 +79,24 @@ body {
   /* margin: 0;
   padding: 0; */
   /* border: 0; */
-  
+  width: 100%;
   height: 45px;
-  border-top: 1px solid #4976e6; 
+  border-top: 1px solid #4976e6;
+  display: flex; 
+  justify-content: center;
 }
 
 .bottom-div-content {
   box-sizing: border-box;
-  /* margin: 0; */
+  margin: 0;
   padding: 0;
   border: 0;
   /* margin: 0 auto; */
-  border: 30px solid green;
+  /* border: 30px solid green; */
+  width: 100%;
   
   max-width: 1200px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .navigation-container{
@@ -174,10 +185,10 @@ body {
 }
 
 .link:hover {
-  box-sizing: border-box;
+  /* box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 0;
+  border: 0; */
 
   text-decoration: underline;
 }
@@ -232,14 +243,8 @@ body {
 }
 
 .header-search-button {
-  box-sizing: border-box;
-  /* margin: 0; */
   padding: 0;
-  /* border: 0; */
-  vertical-align: baseline;
-
-  outline: none;
- text-decoration: none;
+  border: 0;
   border-radius: 0 4px 4px 0;
   background-color: #ffffff;
   height: 35px;
@@ -466,7 +471,7 @@ body {
   list-style: none;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .gb-list-item {
   box-sizing: border-box;
@@ -510,8 +515,6 @@ body {
   list-style: none;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-  border: 1px solid red;;
 }
 
 .utility-navigation{
@@ -549,7 +552,7 @@ body {
   border: 0;
 
   margin-left: 36px;
-  margin-top: 7px;
+  /* margin-top: 7px; */
   /* vertical-align: text-bottom; */
 }
 
