@@ -1,5 +1,5 @@
+//Library imports
 import React from 'react';
-
 import Rating from '@material-ui/lab/Rating';
 import GradeOutlinedIcon from '@material-ui/icons/GradeOutlined';
 
@@ -17,9 +17,9 @@ const Stars = ({ product }) => {
               readOnly 
             />
             </i>
-        <span className="totalReviews">{ `reviews (${ product.customerReviewCount })` }</span>
+          <span className="totalReviews">{ `reviews (${ product.customerReviewCount })` }</span>
         </div>
-    </li>
+      </li>
     </ul>
   );
 };
