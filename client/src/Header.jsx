@@ -1,36 +1,70 @@
+//Libary imports
 import React, { useState, useEffect } from 'react';
-import SearchForm from './components/SearchForm.jsx';
+import Axios from 'axios';
+
+//Data imports
 import { linksData } from './dummy-data.js';
+
+//Local components
+import SearchForm from './components/SearchForm.jsx';
 import LinkList from './components/LinkList.jsx';
 import LogoContainer from './components/LogoContainer.jsx';
 import Icons from './components/Icons.jsx';
-import Axios from 'axios';
+import Cart from './components/Cart.jsx';
 
+//Optional Icons
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 
 const Header = () => {
-  const [products, setProducts] = useState([]);
-  //TECH DEBT HERE FIX LATER
-  const [productsUpdated, setProductsUpdated] = useState(false); 
-  const [links] = useState(linksData);
+
+  //All the prodcuts from the database
+  const [ products, setProducts ] = useState([]);
+  //Tells the use effect hook if it needs to change again
+  const [ productsUpdated, setProductsUpdated] = useState(false);
+  //The link names that get mapped on top-most navigation bar
+  const [ links ] = useState(linksData);
+  //Decides whether shopping cart is showing on page
+  const [ isShoppingCartShowing, setShoppingCart ] = useState(false);
   
-  //TECH DEBT HERE FIX LATER
+  //Similar to componentDidMount & componentWillUpdate
   useEffect(() => {
+    //get all prodcuts from db
     getAllProducts();
   }, [productsUpdated]);
 
   const getAllProducts = () => {
     Axios.get('/api/get/products')
     .then((result) => {
-      let allProducts = result.data;
-      // console.log(allProducts);
+      //Array of prodcuts from db
+      const allProducts = result.data;
+      //set state to incoming array
       setProducts(allProducts);
     })
     .catch((err) => {
+      // show the error in client side console
       console.log("error in client ", err);
     });
   };
+
+
+  const handleShoppingCartClick = () => {
+    setShoppingCart(true);
+  };
+
+
+  const handleClose = () => {
+    setShoppingCart(false);
+  };
+
+  let shoppingCart;
+
+  //Show shoppingCart
+  if(isShoppingCartShowing){
+    shoppingCart = (
+      <Cart handleClose={ handleClose }/>
+    );
+  }
 
   return(
     <div className="header-large">
@@ -41,9 +75,9 @@ const Header = () => {
             <LinkList links={links}/>
             {/*<div className="top-nav-items"></div>*/}
             <div className="middle-container">
-              <SearchForm suggestions={products}/>
+              <SearchForm suggestions={products} />
               <div className="middle-right">
-                <Icons/>
+                <Icons shoppingCartFunction={ handleShoppingCartClick }/>
               </div>
             </div>
           </div>
@@ -111,6 +145,7 @@ const Header = () => {
          </div>
         </div> 
       </div>
+      { shoppingCart }
     </div>
   );
 };
