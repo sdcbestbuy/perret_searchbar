@@ -1,5 +1,8 @@
 export default function shortenNameOnHyphen(name){
     //shorten the name of a prodcut on second shortenNameOnHyphen
+    if(name.length < 20){
+      return name;
+    }
     let hyphenCounter =0;
     let currentChar;
     let index;
