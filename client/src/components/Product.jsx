@@ -3,7 +3,7 @@ import React from 'react';
 const Product = ({ product }) => {
   return(
     <div>
-      <p>{product.name}</p>
+      <p>{ product.name }</p>
     </div>    
   );
 };

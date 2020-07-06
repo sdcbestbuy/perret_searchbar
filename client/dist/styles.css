@@ -1,35 +1,61 @@
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
   vertical-align: baseline;
+} */
+
+/* html,
+body {
+  height: 100%;
+  width: 100%;
+} */
+
+body {
+  margin: 0;
 }
 
 /* This is my body of my component */
 #search-bar {
+  /* box-sizing: border-box; */
+  margin: 0;
+  /* padding: 0; */
+  /* border: 0; */
+
+  display: block;
   /* border: 3px solid black; */
   font-family: Human BBY Web,Arial,Helvetica,sans-serif;
   color: #ffffff;
   width: 100%;
-  height: 100%;
+  height: 148px;
+  /* position: relative; */
 }
 
 .header-large {
+  /* box-sizing: border-box; */
+  /* margin: 0; */
+  padding: 0;
+  border: 0;
+
   background-color: #0346be;
   display: block;
-  /* Change later to be 148px */
   height: 148px;
   width: 100%;
   /* display: flex; */
-  /* justify-content: center;
-   */
-   text-align: center;
+  /* justify-content: center;*/
+  text-align: center;
 
   margin: 0 auto;
 }
 
 .top-navigation-section {
+  box-sizing: border-box;
+  /* margin: 0; */
+  /* padding: 0; */
+  border: 0;
+  
+  
   height: 102px;
   padding: 13px 0 13px 0;
   /* border: 1px solid pink; */
@@ -38,23 +64,47 @@
 }
 
 .top-navigation-container {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+  border: 0;
+  
   width: 100%;
   height: 100%;
   padding: 0 40px;
 }
 
 .fullbleed-wrapper{
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+  /* border: 0; */
+  width: 100%;
   height: 45px;
-  border-top: 1px solid #4976e6; 
+  border-top: 1px solid #4976e6;
+  display: flex; 
+  justify-content: center;
 }
 
 .bottom-div-content {
-  /* border: 1px solid pink; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* margin: 0 auto; */
+  /* border: 30px solid green; */
+  width: 100%;
+  
   max-width: 1200px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
 }
 
 .navigation-container{
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+  border: 0;
+  
   height: 45px;
   width: 100%;
   height: 100%;
@@ -62,17 +112,35 @@
 }
 
 .bby-logo-lv {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
+  
   width: 127px;
   height: 100%;
   display: inline-block;
 }
 
 .logo {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+
   height: 72px;
   width: 126px;
 }
 
 .right-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+
   display: inline-block;
   width: calc(100% - 127px);
   height: 100%;
@@ -80,6 +148,12 @@
 }
 
 .top-nav-items {
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   height: 35px;
   width: 100%;
   /* border: 1px solid orange; */
@@ -88,22 +162,43 @@
 }
 
 .link-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
+
   display: flex;
   flex-direction: row;
   list-style-type: none;
 }
 
 .link {
+  box-sizing: border-box;
+  /* margin: 0; */
+  padding: 0;
+  border: 0;
+
   color: #ffffff;
   margin-left: 40px;
   text-decoration: none;
 }
 
 .link:hover {
+  /* box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0; */
+
   text-decoration: underline;
 }
 
 .middle-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   height: 39px;
   width: 100%;
   vertical-align: auto;
@@ -112,6 +207,11 @@
 }
 
 .search-bar-container {
+  box-sizing: border-box;
+  /* margin: 0; */
+  padding: 0;
+  border: 0;
+  
   margin: 0 20px 0 25px;
   width: 60%;
   height: 96%;
@@ -120,11 +220,21 @@
 }
 
 .search-bar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   vertical-align: top;
   display: flex;
 }
 
 .search-input {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   background: #ffffff;
   padding: 10px 0 10px 10px;
   height: 35px;
@@ -133,13 +243,28 @@
 }
 
 .header-search-button {
+  padding: 0;
+  border: 0;
   border-radius: 0 4px 4px 0;
   background-color: #ffffff;
   height: 35px;
   width: 34px;
   color: #0c4bc0;
 }
+
+.seacrh-icon {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .x-button {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   background-color: #ffffff;
   height: 35px;
   width: 32px;
@@ -148,6 +273,11 @@
 }
 
 .middle-right{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   width: 40%;
   height: 37px;
   display: inline-block;
@@ -158,6 +288,11 @@
 }
 
 .icon-container {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -165,6 +300,11 @@
 }
 
 .store-icon{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   display: flex;
   flex-direction: row;
   border-right: 1px solid #4976e6;
@@ -173,16 +313,32 @@
 }
 
 .cart-icon {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   display: flex;
   flex-direction: row;
   font-size: 15px;
 }
 
 .cart-icon-svg {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   font-size: 30px;
 }
 
 .suggestions-dropdown {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+  border: 0;
+  
+  
   background-color: #ffffff;
   color: #0457c8;
   /* #105cca */
@@ -279,6 +435,11 @@
 } */
 
 .bottom-div-content {
+  box-sizing: border-box;
+  margin: 0;
+  /* padding: 0; */
+  border: 0;
+
   /* border: 1px solid red; */
   height: 100%;
   padding: 0 40px; 
@@ -286,6 +447,11 @@
 }
 
 .global-navigation{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   /* border: 1px solid orange; */
   height: 100%;
   /* width: 478px; */
@@ -294,18 +460,36 @@
 }
 
 .global-nav-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
   height: 100%;
   display: flex;
   flex-direction: row;
   list-style: none;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
 }
 .gb-list-item {
+  box-sizing: border-box;
+  /* margin: 0; */
+  padding: 0;
+  border: 0;
+
   margin-right: 20px;
   margin-top: 7px;
   /* vertical-align: text-bottom; */
 }
 
 .gb-list-btn {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   color: #ffffff;
   background-color: #0346be;
   font-size: 22px;
@@ -313,33 +497,71 @@
 }
 
 .utility-navigation-container{
-  display: inline-block;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
+  /* display: inline-block; */
   height: 100%;
   /* width: 700px; */
   width: 50%;
   /* shold have to do this but iy works */
   float: right;
+
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .utility-navigation{
   /* border: 1px solid white; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
 }
 
 .utility-nav-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   height: 100%;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
+
 .util-list-item {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+
   margin-left: 36px;
-  margin-top: 7px;
+  /* margin-top: 7px; */
   /* vertical-align: text-bottom; */
 }
 
 .util-list-btn {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  
   color: #ffffff;
   background-color: #0346be;
   font-size: 18px;
@@ -410,9 +632,61 @@
   width: 50%;
   -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
 }
-
 /* starts end */
-/* acc-icon */
+
+/* Shopping cart styles */
+
+.overlay {
+  position: fixed;
+  top: 0px;
+  background-color: rgba(0,0,0,0.7);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+  z-index: 10000000000;
+}
+
+.shopping-cart-container {
+  width: 700px;
+  height: 500px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.cart-header{
+  height: 60px;
+  width: 100%;
+  background-color: #0457c8;
+  padding: 10px 1px;
+}
+
+.inner-left-cart-header{
+  width: 70%;
+  display: inline-block;
+}
+
+.inner-rigth-cart-header{
+  width: 30%;
+  display: inline-block;
+}
+
+.close-btn{
+ background-color: inherit;
+}
+
+.close-btn-text {
+  font-size: 42px;
+  transform: rotate(45deg);
+  color: #ffffff;
+}
+
+/* end Shopping cart styles */
+
+
+
 
 /* Responsive media queries */
 @media only screen and (max-width: 1000px) {
