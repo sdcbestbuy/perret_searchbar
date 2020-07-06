@@ -13,12 +13,15 @@ const Cart = ({ handleClose }) => {
                 onClick={ handleClose }
                 className="close-btn"
               >
-               <p className="close-btn-text">+</p>
+               +
               </button>
             </div>
           </div>
           <div className="shoopping-cart-card">
-            
+            <img 
+              src="https://thumbs.gfycat.com/RepulsiveScarceCranefly-size_restricted.gif"
+              className="easter-egg"
+            />
           </div>
         </div>
       </div>
