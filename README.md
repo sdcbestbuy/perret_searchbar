@@ -11,6 +11,8 @@ The app was created with the intention of reacreating the functionality of the s
 <!-- This app was created because I wanted an easy way to create dummy data for my applications, to see how my applications would handle mutiple
 users at the same time; while at the same time not having real users. This application also serves as a great way to test new new changes that you may want to apply to a real user database but cannot afford to change or lose data while testing. -->
 
+This particular app was created in an team effort to recreate a popular site's frontend while using a microservices type architecture.My team consisted of 4 team member, we separated the responsibilities into 4 main basic components. The search-bar(this app), the product image, the carousel and reviews.Each componet was created separetly from each other's.Each of our components can run individually, but also have the ability to talk to each other trough a proxy server that each of us also deployed on Aws(elastic beanstalk).
+
 <h2>Important Notice</h2>
 <!-- All of the randomly generated data is fake and therefore do not belong to a real person; the source api uses a long list a name given for a nationality and and adress, everything is made up and made realistic by careful selection of each fake users data. All of the images you see in this app are Free Source images and are generated randomly each time the api is called, which can cause duplication of images for a diferrent user in some cases.  -->
 
@@ -61,9 +63,16 @@ Step 1.)
    
    <img src="assets/fk7.png" width="500" height="auto" style="display: block; margin: 0 auto;">
 
-<h2>Technologies used</h2>
-This application uses the  random user generator api found at: https://randomuser.me/
-This application uses images from http://uifaces.com/; a free source collection of user images
-This application also uses font awesome for the few icons that are used troughout the app; https://fontawesome.com/.
-This application uses a cdn to server a minified version of the jQuery api version 3.3.1 ; https://code.jquery.com/jquery-3.3.1.min.js
-No other frameworks are used in this app.
+<h2>Technologies</h2>
+  <img src="assets/fk7.png" width="500" height="auto" style="display: block; margin: 0 auto;">
+  <h3>Frontend</h3>
+    React with hooks
+    Html
+    Css
+    Webpack & babel-loader (no create-react-app boiler)
+  <h3>Backend</h3>
+  Nodejs
+  Express
+  AWS Elastic Beanstalk
+  AWS S3
+  AWS RDS
