@@ -1,0 +1,46 @@
+{
+  "name": "search-bar",
+  "version": "1.0.0",
+  "description": "hello",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-server": "nodemon index.js",
+    "dev-compile": "webpack -w --config webpack.dev.js",
+    "prod-compile": "webpack -w --config webpack.prod.js",
+    "start": "node index.js",
+    "build": "babel server.js --out-file index.js"
+  },
+  "keywords": [],
+  "author": "Ricardo Guerrero",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/node": "^7.10.3",
+    "@material-ui/core": "^4.10.2",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "acorn": "^7.1.1",
+    "axios": "^0.19.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "minimist": "^1.2.5",
+    "mysql": "^2.17.1",
+    "path": "^0.12.7",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "mini-css-extract-plugin": "^0.9.0",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  }
+}
