@@ -25,7 +25,7 @@ Using this searchbar is the easiest thing you'll ever do. Which is why you can s
   <img src="demo/React.webp" width="60" height="auto" style="display: inline-block; margin: 0 auto;">
   <img src="demo/webpack.png" width="100" height="auto" style="display: inline-block; margin: 0 auto;">
   <img src="demo/babel.png" width="100" height="auto" style="display: inline-block; margin: 0 auto;">
-  <img src="demo/node.png" width="100" height="auto" style="display: inline-block; margin: 0 auto;">
+  <img src="demo/nodejs.png" width="100" height="auto" style="display: inline-block; margin: 0 auto;">
   <img src="demo/aws.png" width="100" height="auto" style="display: inline-block; margin: 0 auto;">
   
   <h3>Frontend</h3>
