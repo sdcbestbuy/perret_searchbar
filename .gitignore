@@ -3,6 +3,8 @@ node_modules
 .DS_Store
 .env
 .gitignore
+webpack.config.js
+.babelrc
 
 
 # Elastic Beanstalk Files
