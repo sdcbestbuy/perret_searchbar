@@ -21,6 +21,8 @@ Using this searchbar is the easiest thing you'll ever do. Which is why you can s
 
 <h2>Demo</h2>
 
+![Farmers Market Finder Demo](demo/demo1.gif)
+
 <h2>Technologies</h2>
   <img src="demo/React.webp" width="60" height="auto" style="display: inline-block; margin: 0 auto;">
   <img src="demo/webpack.png" width="100" height="auto" style="display: inline-block; margin: 0 auto;">
