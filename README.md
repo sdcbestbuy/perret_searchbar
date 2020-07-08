@@ -1,5 +1,5 @@
 # BestBuy Searchbar Clone
-<h1>Access the Demo</h1>
+<!-- <h1>Access the Demo</h1> -->
 
 <!-- Click here to acess the demo ==> https://richigro.github.io/Fake-User-Generator/ -->
 
@@ -15,9 +15,9 @@ This particular app was created in an team effort to recreate a popular site's f
 
 All of the data that this application uses was obtained using a BestBuy developer's Api Key (Not included), which is no longer active meaning the data is hard-coded.
 
-<h2> How to Use </h2>
+<!--- <h2> How to Use </h2>
 
-Using this searchbar is the easiest thing you'll ever do. Which is why you can see all of its functionality in 5 easy steps.
+Using this searchbar is the easiest thing you'll ever do. Which is why you can see all of its functionality in 5 easy steps. -->
 
 <h2>Demo</h2>
 
